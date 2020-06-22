@@ -1,6 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { StatusBar } from 'react-native';
+
+import Home from './screens/Home';
+// import Player from './components/Player';
 
 export default function App() {
-  return <Text>Hello World</Text>;
+  return (
+    <>
+      <StatusBar backgroundColor="transparent" translucent />
+
+      <Home />
+    </>
+  );
 }
