@@ -1,9 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 11237,
-  "expoServerNgrokUrl": "https://wd-8a6.ronnyacacio.who-is-this-pokemon.exp.direct",
-  "packagerNgrokUrl": "https://packager.wd-8a6.ronnyacacio.who-is-this-pokemon.exp.direct",
-  "ngrokPid": 11270
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }
