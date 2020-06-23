@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { shuffle } from 'lodash';
 
 import pokeapi from '../../services/pokeapi';
-import title from '../../assets/images/itle.png';
+import title from '../../assets/images/title.png';
 import logo from '../../assets/images/pokemon-logo.png';
 
 import {
@@ -21,7 +21,6 @@ export default function Home() {
   const [choosenPokemons, setChoosenPokemons] = useState([]);
   const [answer, setAnswer] = useState(null);
   const [score, setScore] = useState(0);
-  const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState(0);
 
   async function loadPokemon() {
@@ -29,8 +28,8 @@ export default function Home() {
     const response = await pokeapi.get(`/${randomPokeNumber}`);
 
     setPokemon(response.data);
-    setChoosenPokemons((prevState) => [...prevState, response.data]);
-    setPokeIds((prevState) => [...prevState, randomPokeNumber]);
+    setChoosenPokemons([response.data]);
+    setPokeIds([randomPokeNumber]);
   }
 
   async function loadChoosenPokemons() {
@@ -51,11 +50,9 @@ export default function Home() {
   function start() {
     setAnswer(false);
     setSelected(0);
-    setLoading(true);
     setChoosenPokemons([]);
     loadPokemon();
     loadChoosenPokemons();
-    setLoading(false);
   }
 
   useEffect(() => {
@@ -82,7 +79,7 @@ export default function Home() {
         <Score>Pontos: {score}</Score>
       </Header>
 
-      {!loading && pokemon && choosenPokemons && (
+      {pokemon && choosenPokemons && (
         <>
           <Pokemon
             showPokemon={!!answer}

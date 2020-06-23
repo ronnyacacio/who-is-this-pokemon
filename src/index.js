@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'react-native';
-import { Audio } from 'expo-av';
+// import { Audio } from 'expo-av';
 
 import Home from './screens/Home';
 
 export default function App() {
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState(false);
 
-  const soundObject = new Audio.Sound();
+  // const soundObject = new Audio.Sound();
 
-  async function playSong() {
-    await soundObject.loadAsync(require('./assets/music/pokesong.mp3'));
-    await soundObject.playAsync();
-    await soundObject.setIsLoopingAsync(true);
-  }
+  // async function playSong() {
+  //   await soundObject.loadAsync(require('./assets/music/pokesong.mp3'));
+  //   await soundObject.playAsync();
+  //   await soundObject.setIsLoopingAsync(true);
+  // }
 
-  useEffect(() => {
-    if (!active) playSong();
-    setActive(true);
-  }, []);
+  // useEffect(() => {
+  //   if (!active) playSong();
+  //   setActive(true);
+  // }, []);
 
   return (
     <>
