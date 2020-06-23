@@ -78,8 +78,7 @@ export default function Home() {
 
         <Score>Pontos: {score}</Score>
       </Header>
-
-      {pokemon && choosenPokemons && (
+      {pokemon && (
         <>
           <Pokemon
             showPokemon={!!answer}
