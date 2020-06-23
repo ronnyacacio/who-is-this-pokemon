@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { shuffle } from 'lodash';
 
-import title from '../../images/title.png';
-import logo from '../../images/pokemon-logo.png';
 import pokeapi from '../../services/pokeapi';
+import title from '../../assets/images/itle.png';
+import logo from '../../assets/images/pokemon-logo.png';
 
 import {
   Wrapper,
@@ -90,7 +90,7 @@ export default function Home() {
           />
           {choosenPokemons.map(({ id, name }) => (
             <ButtonOption
-              key={id}
+              key={String(id)}
               onPress={!!answer ? () => {} : () => handleSelect(id)}
               success={!!answer && id === pokemon.id}
               error={!!answer && id === selected}

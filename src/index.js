@@ -10,7 +10,7 @@ export default function App() {
   const soundObject = new Audio.Sound();
 
   async function playSong() {
-    await soundObject.loadAsync(require('../music/pokesong.mp3'));
+    await soundObject.loadAsync(require('./assets/music/pokesong.mp3'));
     await soundObject.playAsync();
     await soundObject.setIsLoopingAsync(true);
   }
