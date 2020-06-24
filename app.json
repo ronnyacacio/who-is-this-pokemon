@@ -22,9 +22,9 @@
     "android": {
       "package": "com.ronnyacacio.whoisthispokemon",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/adaptiveIcon.png",
         "backgroundColor": "#F50045",
-        "backgroundImage": "./assets/icon.png"
+        "backgroundImage": "./assets/adaptiveIcon.png"
       }
     },
     "githubUrl": "https://github.com/ronnyacacio/who-is-this-pokemon"

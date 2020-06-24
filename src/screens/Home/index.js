@@ -36,7 +36,6 @@ export default function Home() {
     while (i < 3) {
       const randomPokeNumber = Math.round(Math.random() * (151 - 1) + 1);
       const pokeExists = pokeIds.includes(randomPokeNumber);
-      console.log(pokeExists);
       if (!pokeExists) {
         setPokeIds((prevState) => [...prevState, randomPokeNumber]);
         const response = await pokeapi.get(`/${randomPokeNumber}`);
