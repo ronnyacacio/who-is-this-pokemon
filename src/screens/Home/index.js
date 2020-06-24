@@ -26,7 +26,6 @@ export default function Home() {
   async function loadPokemon() {
     const randomPokeNumber = Math.round(Math.random() * (151 - 1) + 1);
     const response = await pokeapi.get(`/${randomPokeNumber}`);
-
     setPokemon(response.data);
     setChoosenPokemons([response.data]);
     setPokeIds([randomPokeNumber]);
@@ -37,6 +36,7 @@ export default function Home() {
     while (i < 3) {
       const randomPokeNumber = Math.round(Math.random() * (151 - 1) + 1);
       const pokeExists = pokeIds.includes(randomPokeNumber);
+      console.log(pokeExists);
       if (!pokeExists) {
         setPokeIds((prevState) => [...prevState, randomPokeNumber]);
         const response = await pokeapi.get(`/${randomPokeNumber}`);
@@ -47,12 +47,11 @@ export default function Home() {
     setChoosenPokemons((prevState) => shuffle(prevState));
   }
 
-  function start() {
+  async function start() {
     setAnswer(false);
     setSelected(0);
-    setChoosenPokemons([]);
-    loadPokemon();
-    loadChoosenPokemons();
+    await loadPokemon();
+    await loadChoosenPokemons();
   }
 
   useEffect(() => {
@@ -78,7 +77,7 @@ export default function Home() {
 
         <Score>Pontos: {score}</Score>
       </Header>
-      {pokemon && (
+      {pokemon && choosenPokemons.length === 4 && (
         <>
           <Pokemon
             showPokemon={!!answer}

@@ -16,7 +16,17 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ronnyacacio.whoisthispokemon"
+    },
+    "android": {
+      "package": "com.ronnyacacio.whoisthispokemon",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#F50045",
+        "backgroundImage": "./assets/icon.png"
+      }
+    },
+    "githubUrl": "https://github.com/ronnyacacio/who-is-this-pokemon"
   }
 }
