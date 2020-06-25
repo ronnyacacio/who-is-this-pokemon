@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { shuffle } from 'lodash';
+import { shuffle, map } from 'lodash';
 
 import pokeapi from '../../services/pokeapi';
 import title from '../../assets/images/title.png';
@@ -82,9 +82,9 @@ export default function Home() {
             showPokemon={!!answer}
             source={{ uri: pokemon.sprites.front_default }}
           />
-          {choosenPokemons.map(({ id, name }) => (
+          {map(choosenPokemons, ({ id, name }) => (
             <ButtonOption
-              key={String(id)}
+              key={String(Math.random())}
               onPress={!!answer ? () => {} : () => handleSelect(id)}
               success={!!answer && id === pokemon.id}
               error={!!answer && id === selected}
