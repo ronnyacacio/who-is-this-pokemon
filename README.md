@@ -71,7 +71,9 @@ $ expo start
 Voçê deve instalar o app expo no seu celular e escanear o qrcode gerado
 ```
 
-<p align="center">Design totalmente inspirado no projeto do @fhugoduarte</p>
+<p align="center">
+  Design totalmente inspirado no projeto do <a href="https://github.com/fhugoduarte">@fhugoduarte<a>
+</p>
 
 <p align="center">
   Made with ❤ by <a href="https://www.linkedin.com/in/ronnyacacio/"> Ronny Acácio </a>
